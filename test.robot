@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Example test
 Library          OperatingSystem
-Library          test_lib.TestingLibrary
+Library          TestingLibrary.py
 
 *** Variables ***
 ${MESSAGE}     Hello, world!
@@ -11,6 +11,6 @@ My Test
     [Documentation]    Example test
     Log     ${MESSAGE}
 
-Test Library
-    [Documentation]    Test importing a Library
-    Print Hello         
+Test PCAP Read
+    [Documentation]    Test reading a pcap file
+    Open
