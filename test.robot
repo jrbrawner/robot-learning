@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Example test
 Library          OperatingSystem
+Library          REST    http://localhost:8000  
 Library          TestingLibrary.py
 
 *** Variables ***
@@ -13,4 +14,9 @@ My Test
 
 Test PCAP Read
     [Documentation]    Test reading a pcap file
-    Open
+    Read Pcap
+
+HTTP Request
+    [Documentation]    Make an HTTP Request
+    GET     /api/mitre/tactics/basic
+    Output Schema     response body
